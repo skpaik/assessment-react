@@ -29,7 +29,6 @@ const Options = [
     changeSort: (sort) => {
       dispatch(changeSort(sort));
       dispatch(fetchPosts({ sort }));
-      //dispatch(recountVotes());
       return dispatch(recountVotes());
     },
   })
