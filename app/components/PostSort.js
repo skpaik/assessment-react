@@ -44,9 +44,8 @@ export default class PostSort extends Component {
   };
 
   onChangeSort = (sort) => {
-    this.setState({ menuOpen: false }, () => {
-      this.props.changeSort(sort);
-    });
+    this.setState({ menuOpen: false });
+    this.props.changeSort(sort);
   };
 
   onOpenMenu = () => {
