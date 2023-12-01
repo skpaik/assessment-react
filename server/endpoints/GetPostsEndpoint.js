@@ -10,9 +10,6 @@ const GetPostsEndpoint = {
   respond: async function (request) {
     const { page, sort } = request.getData();
 
-    console.log(page)
-    console.log(sort)
-
     const { pages, posts } = getPosts(page, sort);
 
     request.respondJSON(

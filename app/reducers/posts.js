@@ -26,12 +26,9 @@ export default function posts(state = InitialState, action) {
     }
 
     case RecountVotes: {
-      console.log(state.posts)
       const votes = state.posts.reduce((prev, post) => {
         return prev + post.votes;
       }, 0);
-
-      console.log(votes)
 
       return {
         ...state,
