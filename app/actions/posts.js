@@ -32,7 +32,8 @@ export function fetchPosts(params) {
     if (error) {
       return dispatch(postError(error));
     }
-    return dispatch(postsLoaded(posts, pages));
+    dispatch(postsLoaded(posts, pages));
+    return dispatch(recountVotes());
   };
 }
 

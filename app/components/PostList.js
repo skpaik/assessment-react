@@ -16,6 +16,7 @@ import './css/_PostList.css';
   (dispatch) => ({
     fetchPosts: (params) => {
       dispatch(fetchPosts(params));
+      //dispatch(recountVotes());
       return dispatch(recountVotes());
     },
     loadPosts: () => dispatch(loadPosts()),
